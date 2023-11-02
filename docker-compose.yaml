@@ -1,0 +1,19 @@
+services:
+  database:
+    image: postgres:latest
+    container_name: azure-dab-postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=mydb
+    ports:
+      - 5432:5432
+  data_api_builder:
+    depends_on:
+      - database
+    image: mcr.microsoft.com/azure-databases/data-api-builder:latest
+    container_name: azure-dab-data-api-builder
+    volumes:
+      - ./config/dab-config.Postgresql.json:/App/dab-config.json
+    ports:
+      - 5000:5000
