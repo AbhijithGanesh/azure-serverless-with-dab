@@ -1,10 +1,8 @@
 "use client";
 
 import NavBar from "@serverless/components/navbar";
-import { useRouter } from "next/navigation";
 
 export default function Home() {
-  const router = useRouter()
   return (
     <>
       <NavBar />
@@ -15,9 +13,9 @@ export default function Home() {
           <div className="antialiased font-extrabold hover:text-[#008bb9]"><a href="https://www.postgresql.org/" target="__blank">Postgres</a></div>and{" "}
           <div className="font-extrabold hover:text-zinc-500"><a href="https://nextjs.org" target="__blank">Next.JS</a></div>
         </section>
-        <button className="px-4 py-2 font-regular bg-slate-900 text-lg rounded-md m-4 border-[0.25px] border-slate-500" onClick={() => { router.push("/signIn") }}>
+        <a href="/signIn" className="px-4 py-2 font-regular bg-slate-900 text-lg rounded-md m-4 border-[0.25px] border-slate-500">
           Get Started
-        </button>
+        </a>
       </main>
     </>
   );

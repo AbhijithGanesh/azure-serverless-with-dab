@@ -1,5 +1,6 @@
 "use client";
 import { Inter } from 'next/font/google'
+import '@radix-ui/themes/styles.css';
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })

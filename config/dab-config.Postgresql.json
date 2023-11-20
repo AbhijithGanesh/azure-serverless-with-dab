@@ -18,7 +18,7 @@
     "host": {
       "cors": {
         "origins": [
-          "http://localhost:5000"
+          "*"
         ],
         "allow-credentials": false
       },
@@ -42,7 +42,7 @@
         }
       },
       "rest": {
-        "enabled": true
+        "enabled": false
       },
       "permissions": [
         {
